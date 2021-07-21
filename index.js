@@ -109,9 +109,7 @@ buttonUp.addEventListener("click", handleUp);
 buttonDown.addEventListener("click", handleDown);
 
 // Media Query
-const smallDevice = window.matchMedia(
-  "screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1)"
-);
+const smallDevice = window.matchMedia("screen and (max-width: 600px)");
 
 smallDevice.addListener(handleDeviceChange);
 
