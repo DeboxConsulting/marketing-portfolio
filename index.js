@@ -20,16 +20,25 @@ Reveal.addEventListener("slidechanged", function (evt) {
 
   // Down
   if (down) {
-    rightArrow.setAttribute("src", "images/Arrow_Black.png");
+    rightArrow.setAttribute(
+      "src",
+      "https://deboxconsulting.github.io/marketing-portfolio/images/Arrow_Black.png"
+    );
     if (
       (h === 7 && v === 0) ||
       (h === 8 && v === 0) ||
       (h === 11 && v === 0) ||
       (h === 12 && v === 0)
     ) {
-      downArrow.setAttribute("src", "images/White_Arrow.gif");
+      downArrow.setAttribute(
+        "src",
+        "https://deboxconsulting.github.io/marketing-portfolio/images/White_Arrow.gif"
+      );
     } else {
-      downArrow.setAttribute("src", "images/Arrow_Red.gif");
+      downArrow.setAttribute(
+        "src",
+        "https://deboxconsulting.github.io/marketing-portfolio/images/Arrow_Red.gif"
+      );
     }
     buttonDown.style.opacity = 1;
   } else {
@@ -38,12 +47,18 @@ Reveal.addEventListener("slidechanged", function (evt) {
 
   // Up And Not Down
   if (up && !down) {
-    rightArrow.setAttribute("src", "images/Arrow_Red.gif");
+    rightArrow.setAttribute(
+      "src",
+      "https://deboxconsulting.github.io/marketing-portfolio/images/Arrow_Red.gif"
+    );
   }
 
   // Not Up And Not Down
   if (!up && !down) {
-    rightArrow.setAttribute("src", "images/Arrow_Red.gif");
+    rightArrow.setAttribute(
+      "src",
+      "https://deboxconsulting.github.io/marketing-portfolio/images/Arrow_Red.gif"
+    );
   }
 
   // Up
