@@ -24,22 +24,22 @@ Reveal.addEventListener("slidechanged", function (evt) {
       "src",
       "https://deboxconsulting.github.io/marketing-portfolio/images/Arrow_Black.png"
     );
-    if (
-      (h === 7 && v === 0) ||
-      (h === 8 && v === 0) ||
-      (h === 11 && v === 0) ||
-      (h === 12 && v === 0)
-    ) {
-      downArrow.setAttribute(
-        "src",
-        "https://deboxconsulting.github.io/marketing-portfolio/images/White_Arrow.gif"
-      );
-    } else {
-      downArrow.setAttribute(
-        "src",
-        "https://deboxconsulting.github.io/marketing-portfolio/images/Arrow_Red.gif"
-      );
-    }
+    // if (
+    //   (h === 7 && v === 0) ||
+    //   (h === 8 && v === 0) ||
+    //   (h === 11 && v === 0) ||
+    //   (h === 12 && v === 0)
+    // ) {
+    //   downArrow.setAttribute(
+    //     "src",
+    //     "https://deboxconsulting.github.io/marketing-portfolio/images/White_Arrow.gif"
+    //   );
+    // } else {
+    //   downArrow.setAttribute(
+    //     "src",
+    //     "https://deboxconsulting.github.io/marketing-portfolio/images/Arrow_Red.gif"
+    //   );
+    // }
     buttonDown.style.opacity = 1;
   } else {
     buttonDown.style.opacity = 0;
