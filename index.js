@@ -109,29 +109,23 @@ buttonUp.addEventListener("click", handleUp);
 buttonDown.addEventListener("click", handleDown);
 
 // Media Query
-// const smallDevice = window.matchMedia(
-//   "screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1)"
-// );
+const smallDevice = window.matchMedia(
+  "screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1)"
+);
 
-// smallDevice.addListener(handleDeviceChange);
+smallDevice.addListener(handleDeviceChange);
 
-// function handleDeviceChange(e) {
-//   const elem = document.getElementById("sm-main");
+function handleDeviceChange(e) {
+  const rotateSlide = document.getElementById("s0");
 
-//   if (e.matches) {
-//     console.log("Tablet Mode");
-//     elem.setAttribute(
-//       "data-background-image",
-//       "images/Debox_Deck_Presentation-08.jpg"
-//     );
-//   } else {
-//     console.log("Not Tablet");
-//     elem.setAttribute(
-//       "data-background-image",
-//       "images/Debox_Deck_Presentation-07.jpg"
-//     );
-//   }
-// }
+  if (e.matches) {
+    // add rotate slide
+    rotateSlide.setAttribute("data-visibility", "visible");
+  } else {
+    // Remove rotate slide
+    rotateSlide.setAttribute("data-visibility", "hidden");
+  }
+}
 
-// // Run it initially
-// handleDeviceChange(smallDevice);
+// Run it initially
+handleDeviceChange(smallDevice);
