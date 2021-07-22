@@ -1,5 +1,6 @@
 Reveal.initialize({
   controls: false,
+  touch: false
 });
 
 const buttonLeft = document.getElementById("navigate-left");
