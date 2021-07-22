@@ -137,7 +137,7 @@ Reveal.addEventListener("vid5", function (evt) {
 const handleLeft = (e) => {
   e.preventDefault();
   const indices = Reveal.getIndices()["h"];
-  if (indices === 2 || indices === 6 || indices === 5) {
+  if (indices === 3 || indices === 7 || indices === 6) {
     Reveal.left();
   } else {
     Reveal.slide(indices - 1, 0, 0);
@@ -146,13 +146,8 @@ const handleLeft = (e) => {
 const handleRight = (e) => {
   e.preventDefault();
   const indices = Reveal.getIndices()["h"];
-  if (
-    indices + 1 === 2 ||
-    indices + 1 === 3 ||
-    indices + 1 === 5 ||
-    indices + 1 === 6
-  ) {
-    Reveal.right();
+  if (indices === 2 || indices === 3 || indices === 5 || indices === 6) {
+    Reveal.next();
   } else {
     Reveal.slide(indices + 1, 0, 0);
   }
