@@ -452,3 +452,56 @@ body {
   font-size: 20px !important;
   text-align: left;
 }
+
+.instructions_container {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 35px;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+.instructions {
+  width: max-content;
+  color: #000 !important;
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 18px !important;
+  background-color: white;
+  line-height: 25px;
+  padding: 8px;
+  text-align: center;
+  animation: mymove 1s linear;
+  display: none;
+}
+
+@keyframes mymove {
+  0% {
+    transform: translateY(80px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 600px),
+  (max-height: 600px) {
+  .instructions {
+    font-size: 12px !important;
+    line-height: 22px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .instructions_container {
+    bottom: 80px;
+  }
+
+  .instructions {
+    font-size: 12px !important;
+    line-height: 22px;
+  }
+}
