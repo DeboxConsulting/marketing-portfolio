@@ -83,6 +83,56 @@ Reveal.addEventListener("slidechanged", function (evt) {
   }
 });
 
+// Video 1
+Reveal.addEventListener("vid1", function (evt) {
+  const videos = document.getElementsByTagName("video");
+  videos.forEach((video) => {
+    if (video.muted) {
+      video.muted = false;
+    }
+  });
+});
+
+// Video 2
+Reveal.addEventListener("vid2", function (evt) {
+  const videos = document.getElementsByTagName("video");
+  videos.forEach((video) => {
+    if (video.muted) {
+      video.muted = false;
+    }
+  });
+});
+
+// Video 3
+Reveal.addEventListener("vid3", function (evt) {
+  const videos = document.getElementsByTagName("video");
+  videos.forEach((video) => {
+    if (video.muted) {
+      video.muted = false;
+    }
+  });
+});
+
+// Video 4
+Reveal.addEventListener("vid4", function (evt) {
+  const videos = document.getElementsByTagName("video");
+  videos.forEach((video) => {
+    if (video.muted) {
+      video.muted = false;
+    }
+  });
+});
+
+// Video 5
+Reveal.addEventListener("vid5", function (evt) {
+  const videos = document.getElementsByTagName("video");
+  videos.forEach((video) => {
+    if (video.muted) {
+      video.muted = false;
+    }
+  });
+});
+
 const handleLeft = (e) => {
   e.preventDefault();
   const indices = Reveal.getIndices()["h"];
