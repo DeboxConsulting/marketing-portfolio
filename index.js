@@ -3,6 +3,8 @@ Reveal.initialize({
   touch: false,
 });
 
+var isMobile = false;
+
 const buttonLeft = document.getElementById("navigate-left");
 const buttonRight = document.getElementById("navigate-right");
 const buttonUp = document.getElementById("navigate-up");
@@ -137,19 +139,40 @@ Reveal.addEventListener("vid5", function (evt) {
 const handleLeft = (e) => {
   e.preventDefault();
   const indices = Reveal.getIndices()["h"];
-  if (indices === 3 || indices === 7 || indices === 6) {
-    Reveal.left();
+  if (isMobile) {
+    if (indices === 3 || indices === 7 || indices === 6) {
+      Reveal.left();
+    } else {
+      Reveal.slide(indices - 1, 0, 0);
+    }
   } else {
-    Reveal.slide(indices - 1, 0, 0);
+    if (indices === 2 || indices === 6 || indices === 5) {
+      Reveal.left();
+    } else {
+      Reveal.slide(indices - 1, 0, 0);
+    }
   }
 };
 const handleRight = (e) => {
   e.preventDefault();
   const indices = Reveal.getIndices()["h"];
-  if (indices === 2 || indices === 3 || indices === 5 || indices === 6) {
-    Reveal.next();
+  if (isMobile) {
+    if (indices === 2 || indices === 3 || indices === 5 || indices === 6) {
+      Reveal.next();
+    } else {
+      Reveal.slide(indices + 1, 0, 0);
+    }
   } else {
-    Reveal.slide(indices + 1, 0, 0);
+    if (
+      indices + 1 === 2 ||
+      indices + 1 === 3 ||
+      indices + 1 === 5 ||
+      indices + 1 === 6
+    ) {
+      Reveal.right();
+    } else {
+      Reveal.slide(indices + 1, 0, 0);
+    }
   }
 };
 const handleUp = (e) => {
@@ -177,9 +200,11 @@ function handleDeviceChange(e) {
   if (e.matches) {
     // add rotate slide
     rotateSlide.setAttribute("data-visibility", "visible");
+    isMobile = true;
   } else {
     // Remove rotate slide
     rotateSlide.setAttribute("data-visibility", "hidden");
+    isMobile = false;
   }
 }
 
